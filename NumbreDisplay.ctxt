@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=limitNumber\ display2
+comment0.target=NumbreDisplay(int,\ int)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ NumbreDisplay\r\n
+comment1.params=
+comment1.target=void\ setValue()
+comment1.text=\r\n\ M\u00E9todo\ setter\ que\ fija\ el\ valor\ actual\ del\ display\ al\ valor\ pasado\ como\ par\u00E1metro.\r\n
+comment2.params=
+comment2.target=java.lang.String\ getDisplayValue()
+comment3.params=
+comment3.target=int\ getValue()
+numComments=4
