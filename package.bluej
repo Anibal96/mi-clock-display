@@ -1,3 +1,24 @@
 #BlueJ package file
-#Fri Nov 13 10:45:19 CET 2015
+objectbench.height=100
+objectbench.width=148
+package.editor.height=402
+package.editor.width=353
+package.editor.x=536
+package.editor.y=0
+package.numDependencies=0
+package.numTargets=1
+package.showExtends=true
+package.showUses=true
 project.charset=UTF-8
+target1.editor.height=616
+target1.editor.width=1040
+target1.editor.x=-8
+target1.editor.y=-8
+target1.height=50
+target1.name=NumbreDisplay
+target1.showInterface=false
+target1.type=ClassTarget
+target1.typeParameters=
+target1.width=110
+target1.x=70
+target1.y=10
