@@ -1,9 +1,9 @@
 #BlueJ class context
-comment0.params=
-comment0.target=ClockDisplay()
+comment0.params=tipo
+comment0.target=ClockDisplay(boolean)
 comment0.text=\r\n\ Contructor\ que\ inicializa\ a\ 00\:00.\r\n
-comment1.params=horas\ minutos
-comment1.target=ClockDisplay(int,\ int)
+comment1.params=horas\ minutos\ tipo
+comment1.target=ClockDisplay(int,\ int,\ boolean)
 comment1.text=\r\n\ Constructor\ que\ inicializa\ a\ los\ valores\ que\ das.\r\n
 comment2.params=
 comment2.target=void\ actualizarHoraActual()

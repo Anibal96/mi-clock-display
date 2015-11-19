@@ -13,34 +13,42 @@ public class ClockDisplay
     private NumbreDisplay minuto;
     //Atributo que almacena la hora actual en formato 24 horas.
     private String horaActual;
-
+    //Atributo booleano que asigno a la maquina si es o no de 24 horas.
+    private boolean tipos;
     /**
      * Contructor que inicializa a 00:00.
      */
-    public ClockDisplay(){
+    public ClockDisplay(boolean tipo){
         hora = new NumbreDisplay(24);
         minuto = new NumbreDisplay(59);
         actualizarHoraActual();
+        tipos = tipo;
     }
   
     /**
      * Constructor que inicializa a los valores que das.
      */
-    public ClockDisplay(int horas, int minutos){
+    public ClockDisplay(int horas, int minutos, boolean tipo){
         hora = new NumbreDisplay(24);
         minuto = new NumbreDisplay(59);
         setTime(horas, minutos);
+        tipos = tipo;
     }
     /**
      * Metodo que asigna a la hora actual unos parametros para que salga con 5 caracteres.
      */
     public void actualizarHoraActual(){
-        if (hora.getValue() > 12){
-            int horas = hora.getValue() - 12;
-            horaActual = horas + ":" + minuto.getDisplayValue() + "pm" ;
+        if (tipos == true){
+            if (hora.getValue() > 12){
+                int horas = hora.getValue() - 12;
+                horaActual = horas + ":" + minuto.getDisplayValue() + "pm" ;
+            }
+            else if(hora.getValue() <= 12){
+                horaActual = hora.getDisplayValue() + ":" + minuto.getDisplayValue() + "am" ;
+            }
         }
-        if (hora.getValue() <= 12){
-            horaActual = hora.getDisplayValue() + ":" + minuto.getDisplayValue() + "am" ;
+        else{
+            horaActual = hora.getDisplayValue() + ":" + minuto.getDisplayValue();
         }
     }
     
