@@ -11,7 +11,7 @@ public class ClockDisplay
     private NumbreDisplay hora;
     //Minutos asignados.
     private NumbreDisplay minuto;
-    //Atributo que almacena la hora actual.
+    //Atributo que almacena la hora actual en formato 24 horas.
     private String horaActual;
 
     /**
@@ -19,7 +19,7 @@ public class ClockDisplay
      */
     public ClockDisplay(){
         hora = new NumbreDisplay(24);
-        minuto = new NumbreDisplay(60);
+        minuto = new NumbreDisplay(59);
         actualizarHoraActual();
     }
   
@@ -28,14 +28,20 @@ public class ClockDisplay
      */
     public ClockDisplay(int horas, int minutos){
         hora = new NumbreDisplay(24);
-        minuto = new NumbreDisplay(60);
+        minuto = new NumbreDisplay(59);
         setTime(horas, minutos);
     }
     /**
      * Metodo que asigna a la hora actual unos parametros para que salga con 5 caracteres.
      */
     public void actualizarHoraActual(){
-        horaActual = hora.getDisplayValue() + ":" + minuto.getDisplayValue();
+        if (hora.getValue() > 12){
+            int horas = hora.getValue() - 12;
+            horaActual = horas + ":" + minuto.getDisplayValue() + "pm" ;
+        }
+        if (hora.getValue() <= 12){
+            horaActual = hora.getDisplayValue() + ":" + minuto.getDisplayValue() + "am" ;
+        }
     }
     
      /**
