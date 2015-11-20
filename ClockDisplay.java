@@ -31,8 +31,8 @@ public class ClockDisplay
     public ClockDisplay(boolean reloj12Horas)
     {
         años = new NumberDisplay(99);
-        meses = new NumberDisplay(12);
-        dias = new NumberDisplay(30);
+        meses = new NumberDisplay(13);
+        dias = new NumberDisplay(31);
         horas = new NumberDisplay(24);
         minutos = new NumberDisplay(60);
         años.setValue(15);
@@ -96,9 +96,15 @@ public class ClockDisplay
             horas.increment();
             if ( horas.getValue() == 0) {
                 dias.increment();
-                if ( dias.getValue() == 0) {
+                if (dias.getValue() == 0){
+                    dias.setValue(1);
+                }
+                if ( dias.getValue() == 1) {
                     meses.increment();
-                    if ( meses.getValue() == 0) {
+                    if (meses.getValue() == 0) {
+                        meses.setValue(1);
+                    }
+                    if ( meses.getValue() == 1) {
                         años.increment();
                     }
                 }
